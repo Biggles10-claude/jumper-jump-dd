@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jumper ($JUMP) Legion Sale — Due Diligence Brief</title>
+  <meta name="description" content="Standard due diligence brief on the Jumper JUMP public sale on Legion. As of 2 Oct 2026. Not financial advice." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f6f3;
+      --surface: #ffffff;
+      --ink: #1a1a1a;
+      --muted: #5c5c5c;
+      --line: rgba(0, 0, 0, 0.08);
+      --accent: #c45c26;
+      --ok: #2f7d4a;
+      --warn: #a56a1a;
+      --bad: #a33;
+      --radius: 12px;
+      --measure: 40rem;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+    .bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(247, 246, 243, 0.92);
+      border-bottom: 1px solid var(--line);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .bar strong { font-weight: 600; letter-spacing: -0.02em; }
+    .bar span { color: var(--muted); font-size: 0.9rem; }
+    main {
+      max-width: calc(var(--measure) + 8rem);
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    .prose { max-width: var(--measure); }
+    .wide { max-width: calc(var(--measure) + 6rem); }
+    h1 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.75rem, 4vw, 2.4rem);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.75rem;
+    }
+    h2 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: 1.45rem;
+      margin: 2.5rem 0 0.85rem;
+      letter-spacing: -0.02em;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .lede {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 0 0 1.25rem;
+      max-width: 38rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.75rem;
+    }
+    .badge {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .badge.accent {
+      background: rgba(196, 92, 38, 0.1);
+      border-color: rgba(196, 92, 38, 0.25);
+      color: var(--accent);
+      font-weight: 500;
+    }
+    .badge.warn {
+      background: rgba(165, 106, 26, 0.1);
+      border-color: rgba(165, 106, 26, 0.28);
+      color: var(--warn);
+      font-weight: 500;
+    }
+    .takeaways {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 0.75rem;
+      margin: 0.5rem 0 1.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+    }
+    .card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+    .card.emphasis {
+      border-color: rgba(196, 92, 38, 0.28);
+      background: rgba(196, 92, 38, 0.04);
+    }
+    p { margin: 0 0 1rem; }
+    ul, ol { margin: 0 0 1rem; padding-left: 1.25rem; }
+    li { margin-bottom: 0.45rem; }
+    a { color: var(--accent); }
+    a:hover { text-decoration-thickness: 2px; }
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1rem 0 1.5rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    table {
+      width: 100%;
+      min-width: 28rem;
+      border-collapse: collapse;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      font-size: 0.92rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.7rem 0.85rem;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      background: rgba(0,0,0,0.03);
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    tr:last-child td { border-bottom: 0; }
+    .ok { color: var(--ok); font-weight: 500; }
+    .warn { color: var(--warn); font-weight: 500; }
+    .bad { color: var(--bad); font-weight: 500; }
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1rem 1.15rem;
+      margin: 1rem 0 1.5rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .callout strong { color: var(--ink); }
+    .sources {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sources li {
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.92rem;
+    }
+    .sources li:last-child { border-bottom: 0; }
+    .sources .ref {
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-right: 0.35rem;
+    }
+    footer {
+      max-width: calc(var(--measure) + 8rem);
+      margin: 0 auto;
+      padding: 0 1.25rem 3rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.5rem;
+    }
+    footer p { margin: 0 0 0.4rem; }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.88em;
+      background: rgba(0,0,0,0.05);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+    }
+    .meta-line {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0 0 0.5rem;
+    }
+    @media (max-width: 560px) {
+      body { font-size: 1rem; }
+      main { padding: 1.5rem 1rem 2.5rem; }
+      .takeaways { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <strong>Jumper ($JUMP) DD</strong>
+    <span>Legion public sale · standard depth · not financial advice</span>
+  </div>
+
+  <main>
+    <article class="prose">
+      <h1>Jumper ($JUMP) Legion Sale — Due Diligence Brief</h1>
+      <p class="lede">
+        Company + market + risk brief for the JUMP utility-token public sale on Legion,
+        as Jumper spins out of LI.FI. Audience: informed crypto investor (AU).
+      </p>
+
+      <div class="badges">
+        <span class="badge">As of 2 Oct 2026, ~07:15 AWST</span>
+        <span class="badge warn">Sale closing today · 2 Oct 13:00 UTC (21:00 AWST)</span>
+        <span class="badge accent">Standard DD</span>
+        <span class="badge">Token-only · no equity</span>
+      </div>
+
+      <h2>TL;DR</h2>
+      <div class="takeaways">
+        <div class="card">
+          <h3>What it is</h3>
+          <p>Public sale of utility token <strong>JUMP</strong> on <strong>Legion</strong>. Price <strong>$0.075</strong> → <strong>$75M FDV</strong>; raise <strong>$2M target / $3M hard cap</strong> USDC on Ethereum; <strong>4%</strong> of 1B supply. Token-only (no Jumper equity).</p>
+        </div>
+        <div class="card">
+          <h3>Traction is real</h3>
+          <p>DefiLlama: ~<strong>$25.8B</strong> cumulative bridge + ~<strong>$12.2B</strong> DEX agg (~<strong>$38B</strong> combined) vs company claim &gt;<strong>$41B</strong>. Recent bridge ~<strong>$0.98B / 30d</strong>.</p>
+        </div>
+        <div class="card">
+          <h3 class="warn">Monetization soft spot</h3>
+          <p>Tracked fees/revenue ~<strong>$18k</strong> trailing 30d (~<strong>$160–170k</strong> annualized). ~<strong>2.5 bps</strong> fee trial reported as planned. Value accrual to JUMP is <strong>indicative / under design</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Odds vs Squid</h3>
+          <p>Closest Legion peer <strong>Squid (QUID)</strong> sold at <strong>$45M FDV</strong>; later ~<strong>$67–95M</strong> FDV / ~<strong>$9.6M</strong> circ. JUMP’s <strong>$75M</strong> sale FDV is richer, with weaker proven fee capture.</p>
+        </div>
+        <div class="card emphasis">
+          <h3>Bottom line</h3>
+          <p>Credible distribution + real spin-out thesis; <strong>thin safety margin</strong> at $75M vs current on-chain revenue. Main bets: fee adoption, Earn/Perps/RWA, post-TGE float/airdrop. Not financial advice.</p>
+        </div>
+      </div>
+
+      <h2>Key findings</h2>
+      <ol>
+        <li><strong>Sale mechanics are clear on Legion’s help center</strong> (primary): dates, USDC/ETH rail, $2M/$3M caps, merit allocation (Legion Score + Jumper XP + waitlist), geo exclusions, EU &lt;150/country (no MiCA white paper), 50% TGE + 4-month vest for public allotment, utility token with <strong>no governance</strong>.</li>
+        <li><strong>Independent volume corroborates the scale narrative</strong> (DefiLlama), though “#1 by bridging volume / 15%+ share” and <strong>100k MAU</strong> remain partly company-asserted.</li>
+        <li><strong>Corporate story is a neutrality + token-outlet spin-out:</strong> LI.FI keeps B2B routing (~$52M equity raised historically; clients incl. major wallets); Jumper becomes consumer front-end with JUMP as sole claimed ownership rail; LI.FI shareholders reportedly convert into locked JUMP (~26%).</li>
+        <li><strong class="bad">Security inheritance risk is material:</strong> Jul 2024 LI.FI diamond facet exploit (~<strong>$11.6M</strong>, infinite approvals, ~153 wallets) hit the same stack Jumper users interact with; team disabled facet and reimbursed.</li>
+        <li><strong class="warn">Demand headlines can mislead:</strong> Early press of “~$16M raised / ~8×” conflicts with a <strong>$3M hard cap</strong> — treat as <strong>pledges/oversubscription</strong>, not cash raised, until Legion finalizes.</li>
+      </ol>
+
+      <h2>Sale terms (verified)</h2>
+    </article>
+
+    <div class="wide">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Item</th><th>Detail</th><th>Source</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Window</td>
+              <td>29 Sep 13:00 → <strong>2 Oct 13:00 UTC</strong></td>
+              <td>Legion Help</td>
+            </tr>
+            <tr>
+              <td>Cap</td>
+              <td>Soft/target <strong>$2M</strong>, hard <strong>$3M</strong> USDC (ETH)</td>
+              <td>Legion Help</td>
+            </tr>
+            <tr>
+              <td>Price / FDV</td>
+              <td><strong>$0.075</strong> / <strong>$75M</strong></td>
+              <td>AiCoin summarizing Legion memo; consistent with Legion FDV framing</td>
+            </tr>
+            <tr>
+              <td>Supply</td>
+              <td><strong>1,000,000,000</strong> fixed; public sale <strong>4%</strong></td>
+              <td>Legion Help</td>
+            </tr>
+            <tr>
+              <td>Unlock (public)</td>
+              <td><strong>50% at TGE</strong>, rest monthly over <strong>4 months</strong></td>
+              <td>Legion Help</td>
+            </tr>
+            <tr>
+              <td>Investor / team</td>
+              <td>Fully locked at TGE; <strong>12-mo</strong> / <strong>24-mo</strong> cliffs (Legion); AiCoin adds investor half-unlock detail &amp; team early unlock if FDV &gt;$350M</td>
+              <td>Legion Help; AiCoin</td>
+            </tr>
+            <tr>
+              <td>Rights</td>
+              <td>Utility only (discounts/multipliers/perks); <strong>no governance</strong>; fee/buyback/staking <strong>indicative</strong></td>
+              <td>Legion Help</td>
+            </tr>
+            <tr>
+              <td>Allocation</td>
+              <td>Not FCFS; team assigns; pledge ≠ fill; Republic <strong>5%</strong> reserved</td>
+              <td>Legion Help</td>
+            </tr>
+            <tr>
+              <td>Geo</td>
+              <td>Excludes US, UK, UAE, RU, IR, IQ, AF, SY, KP, CU, sanctioned UA; AU <span class="ok">not listed as excluded</span></td>
+              <td>Legion Help</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <article class="prose">
+      <p class="callout">
+        <strong>Participate only via <a href="https://app.legion.cc" rel="noopener noreferrer">app.legion.cc</a>.</strong>
+        Official scam warning against DMs / fake claim sites.
+      </p>
+
+      <h2>Traction &amp; unit economics</h2>
+      <h3>Volume (DefiLlama, parent “Jumper (LI.FI powered)”)</h3>
+      <ul>
+        <li>Bridge aggregator: <strong>$25.783B</strong> cumulative; <strong>$977.79M</strong> / 30d; <strong>$25.17M</strong> / 24h</li>
+        <li>DEX aggregator: <strong>$12.239B</strong> cumulative; <strong>$204.91M</strong> / 30d</li>
+        <li>Perps interface: ~<strong>$0.59M</strong> / 30d (Hyperliquid builder) — early</li>
+      </ul>
+
+      <h3>Fees / revenue (DefiLlama)</h3>
+      <ul>
+        <li>Fees = Revenue ~<strong>$18.4k</strong> trailing 30d (~<strong>$1.2k</strong>/day recently)</li>
+        <li>Site FAQ annualizes ~<strong>$160k</strong> fees / ~<strong>$168k</strong> revenue</li>
+        <li>Income statement shows much larger “Gross Protocol Revenue” prints in <strong>Q1–Q2 2025</strong> then collapse into near-zero tracked platform fees until recent bridge/swap fee lines — treat historical fee series carefully (methodology / fee-on changes).</li>
+      </ul>
+
+      <h3>Company claims (self-reported)</h3>
+      <p>
+        &gt;$40–41B lifetime, &gt;100k MAU, #1 bridging aggregator with ~15% share.
+        Monthly product posts cite <strong>$1.1–1.84B</strong> monthly volumes in early 2026.
+      </p>
+      <p class="callout">
+        <strong>Interpretation:</strong> Distribution and flow are the asset.
+        <span class="warn">Cash economics at the Jumper layer are not yet commensurate with a $75M FDV</span>
+        unless fee take rates and retention post-charging work.
+      </p>
+
+      <h2>Structure &amp; tokenomics</h2>
+      <ul>
+        <li><strong>Spin-out rationale (company):</strong> LI.FI serves wallets/exchanges that compete with Jumper for users → neutrality; Jumper needs a consumer token; LI.FI stays equity/infra.</li>
+        <li><strong>Allocation (AiCoin / Legion memo summary):</strong> Public 4% · Investors 26.07% · Team 14.70% · Community 33.33% · Treasury 21.90%.</li>
+        <li><strong class="warn">Critical gap:</strong> Community unlock schedule <strong>not</strong> fully public in Legion help article; airdrop float at TGE could dwarf the <strong>2%</strong> circulating from public sale (50% of 4%).</li>
+        <li><strong>Value capture:</strong> JUMP does <strong>not</strong> currently encode governance or a binding fee-share. Buying JUMP is exposure to a <strong>narrative + optional future mechanisms</strong>, not a claim on today’s $18k/mo fees.</li>
+      </ul>
+
+      <h2>Competitive context</h2>
+    </article>
+
+    <div class="wide">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Peer</th><th>Note</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>LI.FI</strong></td>
+              <td>Backend; Jumper remains powered by it; enterprise volume larger than Jumper alone.</td>
+            </tr>
+            <tr>
+              <td><strong>Squid (QUID)</strong></td>
+              <td>Closest Legion consumer/infra overlap; sale <strong>$45M FDV</strong>, <strong>11.9×</strong> OS; post-TGE FDV ~<strong>$67–95M</strong>, mcap ~<strong>$9.6M</strong>.</td>
+            </tr>
+            <tr>
+              <td><strong>Across / deBridge / others</strong></td>
+              <td>Bridge specialists; different fee/LP models (AiCoin cites comparative P/S frames — treat as secondary).</td>
+            </tr>
+            <tr>
+              <td><strong>Wallets</strong></td>
+              <td>Phantom, MetaMask, Rabby etc. can route via LI.FI without opening Jumper — <span class="warn">pricing power risk</span> once Jumper charges.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <article class="prose">
+      <p>
+        Alea Research (Jan 2026) argued aggregator→allocator (Earn/Portfolio) thesis —
+        <strong>disclosed paid relationship with Jumper</strong>; use as product color, not independent valuation.
+      </p>
+
+      <h2>Risks &amp; counter-evidence</h2>
+      <ol>
+        <li><strong>Fee flip risk:</strong> Free habit → paid (reported ~2.5 bps trial). Users can route elsewhere on same LI.FI rails.</li>
+        <li><strong>Token–business decoupling:</strong> “No equity / JUMP only” is a <strong>stated intent</strong>, not a guarantee of cashflow to holders; mechanisms TBD / non-binding.</li>
+        <li><strong>Float / unlock overhang:</strong> Community 33% + treasury 22% + investor unlocks after cliffs; public sale is small.</li>
+        <li><strong>Capital lock until TGE:</strong> Funds locked until TGE (target Q4); AiCoin notes longer idle vs some peers.</li>
+        <li><strong class="bad">Smart-contract history:</strong> 2022 and <strong>Jul 2024</strong> LI.FI incidents; diamond+infinite-approval pattern remains a user-opsec concern.</li>
+        <li><strong>Regulatory / access:</strong> No MiCA white paper → EU per-country offer limits; US/UK banned; AU appears eligible but KYC/local law still apply — not legal advice.</li>
+        <li><strong>Oversubscription ≠ edge:</strong> Merit allocation may shrink your fill; Republic/waitlist preference is not a guaranteed allotment.</li>
+        <li><strong>Paid research / PR density:</strong> Alea commissioned; ct.com press commissioned by Jumper — discount boosterism.</li>
+      </ol>
+
+      <h2>Decision lens <span style="font-weight:400;color:var(--muted);font-size:0.85em">(not advice)</span></h2>
+    </article>
+
+    <div class="wide">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>If you…</th><th>Lean…</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Want a <strong>cheap call option</strong> on a top consumer bridge UI + super-app expansion, can stomach <strong>illiquidity to TGE</strong> and <strong>airdrop float</strong>, and accept <strong>utility-token legal design</strong></td>
+              <td class="ok">Possible <strong>small</strong> allocation <em>if</em> eligible and fill terms look fair vs comps</td>
+            </tr>
+            <tr>
+              <td>Underwrite <strong>today’s</strong> fee run-rate or need <strong>governance/cashflow rights</strong></td>
+              <td class="warn"><strong>Pass / wait for TGE price discovery</strong></td>
+            </tr>
+            <tr>
+              <td>Are in an <strong>excluded geo</strong> or need MiCA-grade disclosure</td>
+              <td class="bad"><strong>Cannot / should not</strong> participate via Legion</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <article class="prose">
+      <p class="meta-line">
+        <strong>Australia note:</strong> Not on Legion’s published exclusion list for this sale; still requires Legion KYC and your own compliance judgment.
+      </p>
+
+      <h2>Method &amp; limits</h2>
+      <ul>
+        <li><strong>Primary:</strong> Legion Help Center, DefiLlama protocol page, LI.FI incident report, official Jumper/LI.FI announcements.</li>
+        <li><strong>Secondary:</strong> crypto.news, Foresight/AiCoin, TokenPost, Squid blogs, CoinMarketCap/CoinGecko.</li>
+        <li>Alea = commissioned. TokenPost “$16M raised” treated as <strong>demand</strong>, not hard-cap proceeds.</li>
+        <li>X.com direct fetch 403’d; used official article mirrors + Legion.</li>
+        <li><strong>INSUFFICIENT EVIDENCE</strong> for: final raise fill, exact TGE date, community unlock table, binding fee-share, live MAU audit.</li>
+      </ul>
+
+      <h2>Sources</h2>
+      <ol class="sources">
+        <li>
+          <span class="ref">[1]</span>
+          Legion Help — <em>Jumper ($JUMP) Public Sale on Legion — Everything You Need to Know</em> —
+          <a href="https://help.legion.cc/en/articles/17139928-jumper-jump-public-sale-on-legion-everything-you-need-to-know" rel="noopener noreferrer">help.legion.cc</a>
+        </li>
+        <li>
+          <span class="ref">[2]</span>
+          Jumper announcement article (nitter mirror) —
+          <a href="https://nitter.jaydenha.uk/i/article/2103481417070203369" rel="noopener noreferrer">nitter.jaydenha.uk</a>
+        </li>
+        <li>
+          <span class="ref">[3]</span>
+          DefiLlama — <em>Jumper (LI.FI powered)</em> —
+          <a href="https://defillama.com/protocol/jumper-(li.fi-powered)" rel="noopener noreferrer">defillama.com</a>
+        </li>
+        <li>
+          <span class="ref">[4]</span>
+          AiCoin / Foresight News — <em>Jumper’s $75M FDV IPO</em> —
+          <a href="https://www.aicoin.com/en/article/554255" rel="noopener noreferrer">aicoin.com</a>
+        </li>
+        <li>
+          <span class="ref">[5]</span>
+          Squid — <em>$QUID Public Sale Recap</em> —
+          <a href="https://www.squidrouter.com/blog/quid-public-sale-recap" rel="noopener noreferrer">squidrouter.com</a>
+        </li>
+        <li>
+          <span class="ref">[6]</span>
+          CoinMarketCap / CoinGecko QUID pages (spot checks Oct 2026 session)
+        </li>
+        <li>
+          <span class="ref">[7]</span>
+          ct.com press release (commissioned by Jumper) —
+          <a href="https://ct.com/press-releases/jumper-to-launch-jump-token-sale-on-legion-as-it-spins-out-to-build-the-super-app-for-onchain-finance" rel="noopener noreferrer">ct.com</a>
+        </li>
+        <li>
+          <span class="ref">[8]</span>
+          Alea Research — <em>Jumper Exchange</em> (commissioned) —
+          <a href="https://alearesearch.io/reports/perspectives/jumper-exchange" rel="noopener noreferrer">alearesearch.io</a>
+        </li>
+        <li>
+          <span class="ref">[9]</span>
+          LI.FI — <em>Security Incident Report 16th July</em> —
+          <a href="https://li.fi/knowledge-hub/incident-report-16th-july" rel="noopener noreferrer">li.fi</a>
+        </li>
+        <li>
+          <span class="ref">[10]</span>
+          TokenPost — <em>Jumper Raises About $16 Million…</em> —
+          <a href="https://www.tokenpost.com/news/business/25580" rel="noopener noreferrer">tokenpost.com</a>
+        </li>
+        <li>
+          <span class="ref">[11]</span>
+          Jumper Learn monthly updates (Feb/Mar/Apr 2026) —
+          <a href="https://jumper.xyz/learn" rel="noopener noreferrer">jumper.xyz/learn</a>
+        </li>
+        <li>
+          <span class="ref">[12]</span>
+          crypto.news — sale date coverage —
+          <a href="https://crypto.news/jumper-sets-sep-29-date-for-jump-token-sale-on-legion/" rel="noopener noreferrer">crypto.news</a>
+        </li>
+      </ol>
+    </article>
+  </main>
+
+  <footer>
+    <p>Generated 2 Oct 2026, ~07:15 AWST · from <code>REPORT.md</code> research brief · HTML Artifacts document mode</p>
+    <p><strong>Not financial advice.</strong> Not legal or tax advice. DYOR; eligibility and KYC depend on Legion and local law.</p>
+  </footer>
+</body>
+</html>
