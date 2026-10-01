@@ -199,11 +199,10 @@
     footer {
       max-width: calc(var(--measure) + 8rem);
       margin: 0 auto;
-      padding: 0 1.25rem 3rem;
+      padding: 1.5rem 1.25rem 3rem;
       color: var(--muted);
       font-size: 0.85rem;
       border-top: 1px solid var(--line);
-      padding-top: 1.5rem;
     }
     footer p { margin: 0 0 0.4rem; }
     code {
@@ -253,8 +252,8 @@
           <p>Public sale of utility token <strong>JUMP</strong> on <strong>Legion</strong>. Price <strong>$0.075</strong> → <strong>$75M FDV</strong>; raise <strong>$2M target / $3M hard cap</strong> USDC on Ethereum; <strong>4%</strong> of 1B supply. Token-only (no Jumper equity).</p>
         </div>
         <div class="card">
-          <h3>Traction is real</h3>
-          <p>DefiLlama: ~<strong>$25.8B</strong> cumulative bridge + ~<strong>$12.2B</strong> DEX agg (~<strong>$38B</strong> combined) vs company claim &gt;<strong>$41B</strong>. Recent bridge ~<strong>$0.98B / 30d</strong>.</p>
+          <h3>Traction real — not #1</h3>
+          <p>DefiLlama: ~<strong>$25.8B</strong> cum bridge + ~<strong>$12.2B</strong> DEX (~<strong>$38B</strong> combined) vs company &gt;<strong>$41B</strong>. Recent bridge ~<strong>$0.98B / 30d</strong>, but live rankings put Jumper about <strong class="warn">#4</strong> among bridge aggregators (not #1).</p>
         </div>
         <div class="card">
           <h3 class="warn">Monetization soft spot</h3>
@@ -262,7 +261,7 @@
         </div>
         <div class="card">
           <h3>Odds vs Squid</h3>
-          <p>Closest Legion peer <strong>Squid (QUID)</strong> sold at <strong>$45M FDV</strong>; later ~<strong>$67–95M</strong> FDV / ~<strong>$9.6M</strong> circ. JUMP’s <strong>$75M</strong> sale FDV is richer, with weaker proven fee capture.</p>
+          <p>Closest Legion peer <strong>Squid (QUID)</strong> sold at <strong>$45M FDV</strong> (later ATH ~<strong>$143M</strong> FDV; live ~<strong>$66M</strong> FDV / ~<strong>$9.5M</strong> mcap). JUMP’s <strong>$75M</strong> sale FDV is above Squid’s sale and near Squid’s live FDV, with weaker proven fee capture.</p>
         </div>
         <div class="card emphasis">
           <h3>Bottom line</h3>
@@ -273,10 +272,10 @@
       <h2>Key findings</h2>
       <ol>
         <li><strong>Sale mechanics are clear on Legion’s help center</strong> (primary): dates, USDC/ETH rail, $2M/$3M caps, merit allocation (Legion Score + Jumper XP + waitlist), geo exclusions, EU &lt;150/country (no MiCA white paper), 50% TGE + 4-month vest for public allotment, utility token with <strong>no governance</strong>.</li>
-        <li><strong>Independent volume corroborates the scale narrative</strong> (DefiLlama), though “#1 by bridging volume / 15%+ share” and <strong>100k MAU</strong> remain partly company-asserted.</li>
+        <li><strong>Independent volume corroborates scale but not the #1 claim:</strong> DefiLlama live bridge-aggregator board ranks Jumper about <strong class="warn">#4</strong> by 30d volume (~<strong>$978M</strong>), behind SOCKET, LI.FI, and Silentswap — company “#1 / &gt;15% share” and <strong>100k MAU</strong> are self-reported. Lifetime ~$38B combined volume still triangulates.</li>
         <li><strong>Corporate story is a neutrality + token-outlet spin-out:</strong> LI.FI keeps B2B routing (~$52M equity raised historically; clients incl. major wallets); Jumper becomes consumer front-end with JUMP as sole claimed ownership rail; LI.FI shareholders reportedly convert into locked JUMP (~26%).</li>
         <li><strong class="bad">Security inheritance risk is material:</strong> Jul 2024 LI.FI diamond facet exploit (~<strong>$11.6M</strong>, infinite approvals, ~153 wallets) hit the same stack Jumper users interact with; team disabled facet and reimbursed.</li>
-        <li><strong class="warn">Demand headlines can mislead:</strong> Early press of “~$16M raised / ~8×” conflicts with a <strong>$3M hard cap</strong> — treat as <strong>pledges/oversubscription</strong>, not cash raised, until Legion finalizes.</li>
+        <li><strong class="warn">Demand headlines can mislead:</strong> Press cites ~<strong>$16M</strong> then ~<strong>$25.2M</strong> pledged (~8–12×+ soft target) against a <strong>$3M hard cap</strong> — treat as <strong>pledges/oversubscription</strong>; excess refunded after allocation.</li>
       </ol>
 
       <h2>Sale terms (verified)</h2>
@@ -349,6 +348,7 @@
       <h3>Volume (DefiLlama, parent “Jumper (LI.FI powered)”)</h3>
       <ul>
         <li>Bridge aggregator: <strong>$25.783B</strong> cumulative; <strong>$977.79M</strong> / 30d; <strong>$25.17M</strong> / 24h</li>
+        <li><strong class="warn">Ranking (live board, session fetch):</strong> ~<strong>#4</strong> by 30d bridge-agg volume behind SOCKET (~$1.51B), LI.FI (~$1.27B), Silentswap (~$1.13B) — contradicts company “#1 aggregator by bridging volume” marketing.</li>
         <li>DEX aggregator: <strong>$12.239B</strong> cumulative; <strong>$204.91M</strong> / 30d</li>
         <li>Perps interface: ~<strong>$0.59M</strong> / 30d (Hyperliquid builder) — early</li>
       </ul>
@@ -357,7 +357,8 @@
       <ul>
         <li>Fees = Revenue ~<strong>$18.4k</strong> trailing 30d (~<strong>$1.2k</strong>/day recently)</li>
         <li>Site FAQ annualizes ~<strong>$160k</strong> fees / ~<strong>$168k</strong> revenue</li>
-        <li>Income statement shows much larger “Gross Protocol Revenue” prints in <strong>Q1–Q2 2025</strong> then collapse into near-zero tracked platform fees until recent bridge/swap fee lines — treat historical fee series carefully (methodology / fee-on changes).</li>
+        <li><strong class="warn">Methodology caveat:</strong> cumulative fees show ~<strong>$8M</strong> while cumulative “revenue” is only ~<strong>$20k</strong> — DefiLlama fee vs revenue adapters appear inconsistent across periods; recent 7d ≈ 30d fee print suggests a <strong>fresh fee turn-on</strong>, not a stable run-rate. Treat annualized figures as fragile.</li>
+        <li>Income statement shows much larger “Gross Protocol Revenue” prints in <strong>Q1–Q2 2025</strong> then collapse — likely fee-policy / tracking changes, not pure volume death.</li>
       </ul>
 
       <h3>Company claims (self-reported)</h3>
@@ -395,7 +396,7 @@
             </tr>
             <tr>
               <td><strong>Squid (QUID)</strong></td>
-              <td>Closest Legion consumer/infra overlap; sale <strong>$45M FDV</strong>, <strong>11.9×</strong> OS; post-TGE FDV ~<strong>$67–95M</strong>, mcap ~<strong>$9.6M</strong>.</td>
+              <td>Closest Legion peer; sale <strong>$45M FDV</strong>, <strong>11.9×</strong> OS ($26.7M committed / $2.25M hard cap); live ~<strong>$0.066</strong> → FDV ~<strong>$66M</strong>, mcap ~<strong>$9.5M</strong>; <strong>ATH ~$0.143</strong> (4 Aug 2026) → ~<strong>$143M</strong> FDV (~3.2× sale).</td>
             </tr>
             <tr>
               <td><strong>Across / deBridge / others</strong></td>
@@ -423,9 +424,12 @@
         <li><strong>Float / unlock overhang:</strong> Community 33% + treasury 22% + investor unlocks after cliffs; public sale is small.</li>
         <li><strong>Capital lock until TGE:</strong> Funds locked until TGE (target Q4); AiCoin notes longer idle vs some peers.</li>
         <li><strong class="bad">Smart-contract history:</strong> 2022 and <strong>Jul 2024</strong> LI.FI incidents; diamond+infinite-approval pattern remains a user-opsec concern.</li>
-        <li><strong>Regulatory / access:</strong> No MiCA white paper → EU per-country offer limits; US/UK banned; AU appears eligible but KYC/local law still apply — not legal advice.</li>
+        <li><strong>Regulatory / access:</strong> No MiCA white paper → EU &lt;150/country offer-access limits; US/UK banned; AU appears eligible but KYC/local law still apply — not legal advice.</li>
         <li><strong>Oversubscription ≠ edge:</strong> Merit allocation may shrink your fill; Republic/waitlist preference is not a guaranteed allotment.</li>
         <li><strong>Paid research / PR density:</strong> Alea commissioned; ct.com press commissioned by Jumper — discount boosterism.</li>
+        <li><strong class="warn">Third-party risk grade:</strong> Hindenrank rates Jumper <strong>C- (55/100)</strong> — thin frontend over LI.FI diamond + multi-bridge stack; ranks among riskier bridge UIs; flags infinite-approval surface and phishing. Methodology is third-party / opinionated.</li>
+        <li><strong>EU MiCA path:</strong> No MiCA white paper → sale terms viewable by <strong>&lt;150 residents per EU member state</strong> (offer-access limit, not allocation).</li>
+        <li><strong>Australia:</strong> <span class="ok">Not on Legion’s published exclusion list</span> for this sale; still needs Legion KYC and local compliance judgment (not legal advice).</li>
       </ol>
 
       <h2>Decision lens <span style="font-weight:400;color:var(--muted);font-size:0.85em">(not advice)</span></h2>
@@ -463,10 +467,10 @@
       <h2>Method &amp; limits</h2>
       <ul>
         <li><strong>Primary:</strong> Legion Help Center, DefiLlama protocol page, LI.FI incident report, official Jumper/LI.FI announcements.</li>
-        <li><strong>Secondary:</strong> crypto.news, Foresight/AiCoin, TokenPost, Squid blogs, CoinMarketCap/CoinGecko.</li>
-        <li>Alea = commissioned. TokenPost “$16M raised” treated as <strong>demand</strong>, not hard-cap proceeds.</li>
+        <li><strong>Secondary:</strong> crypto.news, Foresight/AiCoin, TokenPost, Squid blogs, CoinMarketCap/CoinGecko, CoinGabbar, Hindenrank.</li>
+        <li>Alea = commissioned. TokenPost “$16M raised” / CoinGabbar “$25.2M” treated as <strong>demand/pledges</strong>, not hard-cap proceeds.</li>
         <li>X.com direct fetch 403’d; used official article mirrors + Legion.</li>
-        <li><strong>INSUFFICIENT EVIDENCE</strong> for: final raise fill, exact TGE date, community unlock table, binding fee-share, live MAU audit.</li>
+        <li><strong>INSUFFICIENT EVIDENCE</strong> for: final raise fill (pledges reported ~$16–25M vs $3M hard cap), exact TGE date, <strong>community 33.33% unlock table</strong> (not in public Legion help; memo PDF not freely fetched), binding fee-share, live MAU audit, post-spin-out LI.FI exclusivity terms.</li>
       </ul>
 
       <h2>Sources</h2>
@@ -530,12 +534,27 @@
           crypto.news — sale date coverage —
           <a href="https://crypto.news/jumper-sets-sep-29-date-for-jump-token-sale-on-legion/" rel="noopener noreferrer">crypto.news</a>
         </li>
+        <li>
+          <span class="ref">[13]</span>
+          Hindenrank — <em>Jumper Exchange Risk Report</em> (C- / 55/100) —
+          <a href="https://hindenrank.com/protocol/jumper-exchange" rel="noopener noreferrer">hindenrank.com</a>
+        </li>
+        <li>
+          <span class="ref">[14]</span>
+          DefiLlama — <em>Bridge Aggregators</em> rankings —
+          <a href="https://defillama.com/bridge-aggregators" rel="noopener noreferrer">defillama.com/bridge-aggregators</a>
+        </li>
+        <li>
+          <span class="ref">[15]</span>
+          CoinGabbar — <em>Jumper Token Presale Raised $25.2M</em> —
+          <a href="https://www.coingabbar.com/en/jumper-token-presale-raises-25-million-jump-sale-end-date" rel="noopener noreferrer">coingabbar.com</a>
+        </li>
       </ol>
     </article>
   </main>
 
   <footer>
-    <p>Generated 2 Oct 2026, ~07:15 AWST · from <code>REPORT.md</code> research brief · HTML Artifacts document mode</p>
+    <p>Generated 2 Oct 2026, ~07:15 AWST · from <code>REPORT.md</code> research brief (Critic-repaired) · HTML Artifacts document mode</p>
     <p><strong>Not financial advice.</strong> Not legal or tax advice. DYOR; eligibility and KYC depend on Legion and local law.</p>
   </footer>
 </body>
